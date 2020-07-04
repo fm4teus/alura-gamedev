@@ -4,14 +4,15 @@ class Personagem{
     }
 
     exibe(){
-        image(this.imagem, 0, height-135, 110, 135, spriteX, spriteY, 220, 270);
-        spriteX += 220;
-        if(spriteX > 660){
-            spriteX = 0;
-            spriteY += 270; 
+        j+=0.8;
+        image(this.imagem, j, height-135, 110, 135, mateusX, mateusY, 220, 270);
+        mateusX += 220;
+        if(mateusX > 660){
+            mateusX = 0;
+            mateusY += 270; 
         }
-        if (spriteY > 270*3 ){
-            spriteY = 0;
+        if (mateusY > 270*3 ){
+            mateusY = 0;
         } 
     }
 }
