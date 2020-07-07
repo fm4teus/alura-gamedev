@@ -1,12 +1,15 @@
 class Mateus{
-    constructor(imagem, positionX, positionY, sizeX, sizeY){
-        this.imagem = imagem;
+    constructor(imgCorrendo, imgRodando, positionX, positionY, sizeX, sizeY){
+        this.imgCorrendo = imgCorrendo;
+        this.imgRodando = imgRodando;
         this.positionX = positionX;
         this.positionY = positionY;
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.resultante = 0;
         this.jump = 0;
+        this.spriteX = 0;
+        this.spriteY = 0;
     }
 
     exibe(){
@@ -16,25 +19,43 @@ class Mateus{
             this.jump -= gravidade;
         }
         if(this.resultante > 0 || this.positionY > 300){
+            
+            console.log("pulou");
             this.positionY += this.resultante;
+            this.anima( true );
         }
-        image(this.imagem, this.positionX, height-this.positionY, this.sizeX, this.sizeY, spriteX, spriteY, 44, 44);
-        if(i%4==0){
-            this.anima();
+        else {//if(i%4==0){
+            this.anima( false );
         }
+        
     }
 
-    anima(){
-        spriteX += 44;
-        if(spriteX > 88){
-            spriteX = 0;
-            spriteY += 44; 
+    anima( pulando ){
+        if(!pulando){
+        this.spriteX += 44;
+        if(this.spriteX > 88){
+            this.spriteX = 0;
+            this.spriteY += 44; 
         }
-        if (spriteY > 44 && spriteX > 44 ){
-            spriteY = 0;
-            spriteX = 0;
-        } 
+        if (this.spriteY > 44 && this.spriteX > 44 ){
+            this.spriteY = 0;
+            this.spriteX = 0;
+        }
+        image(this.imgCorrendo, this.positionX, height-this.positionY, this.sizeX, this.sizeY, this.spriteX, this.spriteY, 44, 44); 
     }
+    else{
+        this.spriteX += 44;
+        if(this.spriteX > 44){
+            this.spriteX = 0;
+            this.spriteY += 44; 
+        }
+        if (this.spriteY > 0 && this.spriteX > 0 ){
+            this.spriteY = 0;
+            this.spriteX = 0;
+        }
+        image(this.imgRodando, this.positionX, height-this.positionY, this.sizeX-50, this.sizeY-50, this.spriteX, this.spriteY, 44, 44); 
+    }
+}
     pula(){
         if(this.jump < 10)
             this.jump += 120;
