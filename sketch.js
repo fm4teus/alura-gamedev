@@ -1,5 +1,5 @@
 let imagemCenario, imagemMateus, imgRodando, imgAny, imgChamas;
-const gravidade = 11;
+const gravidade = 10;
 let cenario;
 let any, mateus, chamas;
 let trilhaSonora;
@@ -18,11 +18,11 @@ function setup() {
   getAudioContext().suspend();
   createCanvas(1280, 720);
   cenario = new Cenario(imagemCenario,5);
-  mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 200, 200);
-  any = new Any(imgAny, imgRodando ,360, 220, 150, 200);
-  chamas = new Chamas(imgChamas, imgRodando, 1280, 220, 200, 200)
+  mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 100, 100);
+  any = new Any(imgAny, imgRodando ,360, 220, 75, 100);
+  chamas = new Chamas(imgChamas, imgRodando, 1280, 220, 80, 80);
   trilhaSonora.loop();
- // frameRate(2);
+  //frameRate(2);
 }
 
 function draw() { 

@@ -4,7 +4,7 @@ constructor(imgCorrendo, imgRodando, positionX, positionY, sizeX, sizeY){
     this.imgCorrendo = imgCorrendo;
     this.imgRodando = imgRodando;
     this.positionX = positionX;
-    this.positionY = positionY;
+    this.positionY = sizeY;
     this.sizeX = sizeX;
     this.sizeY = sizeY;
     this.resultante = 0;
@@ -20,11 +20,12 @@ exibe(){
     if(this.jump > 0){
         this.jump -= gravidade;
     }
-    if(this.resultante > 0 || this.positionY > 220){
+    if(this.resultante > 0 || this.positionY > this.sizeY){
         this.positionY += this.resultante;
         this.anima( true );
     }
     else {
+        this.positionY = this.sizeY;
         this.fr++;
         this.anima( false );
     }
@@ -32,8 +33,8 @@ exibe(){
 }
 
 pula(){
-    if(this.positionY <= 300)
-        this.jump += 120;
+    if(this.positionY <= this.sizeY)
+        this.jump += 100;
 }
 anda( frente ){
     if(frente){
