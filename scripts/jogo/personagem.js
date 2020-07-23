@@ -44,4 +44,19 @@ anda( frente ){
         this.positionX -=5;
 }
 
+colide( inimigoX, inimigoY){
+    if(collideRectRect(this.positionX + 0.3 * this.sizeX, height - this.positionY , 0.4 * this.sizeX , this.sizeY/2, inimigoX, inimigoY, 448/6, 107)){
+        console.log("bateu");
+        efeitoSonoro.play();
+        trilhaSonora.pause();
+        imgCoffin.show();
+        imgCoffin.position(500,350);
+        imgCoffin.size(350,350);
+        noLoop();
+    }
+    noFill();
+    //rect(this.positionX + 0.3 * this.sizeX, height - this.positionY, 0.4 * this.sizeX, this.sizeY);
+    //rect(inimigoX, inimigoY, 448/6, 107);
+}
+
 }

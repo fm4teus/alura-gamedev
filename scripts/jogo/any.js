@@ -16,7 +16,7 @@ class Any extends Personagem{
             this.spriteY = 0;
             this.spriteX = 0;
         }
-        console.log(this.spriteX, this.spriteY);
+       // console.log(this.spriteX, this.spriteY);
         image(this.imgCorrendo, this.positionX, height-this.positionY, this.sizeX, this.sizeY, this.spriteX, this.spriteY, 150, 200); 
     }
     else{
