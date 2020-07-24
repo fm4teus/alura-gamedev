@@ -50,8 +50,11 @@ colide( inimigoX, inimigoY){
         efeitoSonoro.play();
         trilhaSonora.pause();
         imgCoffin.show();
-        imgCoffin.position(500,350);
-        imgCoffin.size(350,350);
+        imgCoffin.position(this.positionX+width*0.1, 0.3*height);
+        imgCoffin.size(0.6*height,0.6*height);
+        imgFire.position(this.positionX, height-this.sizeY*2);
+        imgFire.size(this.sizeY*2,this.sizeY*2);
+        imgFire.show();
         noLoop();
     }
     noFill();

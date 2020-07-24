@@ -4,40 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Jogo</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-      *{
-        font-family: 'Montserrat', sans-serif;
-      }
-      a button{
-        display: block;
-        margin: auto;
-        height: 30px;
-        width: 50%;
-        border: 1px solid #555555;
-        border-radius: 10px;
-        background: #ffffff;
-        outline: none;
-      }
-      a button:hover{
-        color: #555555;
-        background-color: #eeeeee;
-      }
-      a{
-        text-decoration: none;
-      }
-      h1{
-        text-align: center;
-      }
-      header{
-        padding-top: 150px;
-        padding-bottom: 20px;
-        background: #eeeeee;
-      }
-      main{
-        width: 80%;
-        margin: 0 auto;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/index-style.css">
   </head>
   <body>
     <header>
@@ -46,6 +13,30 @@
     <main>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint fuga facilis culpa, unde iusto sed ab ea doloribus. Sed laudantium adipisci maxime dolorem quas quia quo laborum enim cum ut!</p>
       <a href="./game.html"><button>Clique para Jogar</button></a>
+      <button id="instructions" onclick="renderInstructions()"> instruções </button>
     </main>
+    
+    <section class="instructions hide">
+      <h2>COMO JOGAR</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus quas aut quod veritatis facilis odio, placeat rem fugit nulla praesentium? Facilis nemo accusantium voluptatum quia minus minima, culpa nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur itaque, veniam nemo aliquam quia voluptatum rem tempora vero distinctio quos iure recusandae. Pariatur, inventore nemo deserunt vitae earum animi expedita?</p>
+  </section>
+  <footer>
+    <h3>footer</h3>
+</footer>
+
+<script>
+    const instructionsElement = document.querySelector("section.instructions");
+
+    function renderInstructions(){
+   instructionsElement.classList.toggle("hide");
+  }
+</script>
   </body>
 </html>
+
+
+
+
+
+
+

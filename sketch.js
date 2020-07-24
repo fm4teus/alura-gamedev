@@ -10,16 +10,18 @@ function preload() {
   imagemMateus = loadImage('imagens/personagem/mateus.png');
   imgChamas = loadImage('imagens/inimigos/chamas.png');
   imgCoffin = createImg('imagens/assets/coffin.gif');
+  imgFire = createImg('imagens/assets/fire.gif');
   imgAny = loadImage('imagens/any/any-correndo.png');
   imgRodando = loadImage('imagens/personagem/rodando.png');
   trilhaSonora = loadSound('sons/trilha_jogo.mp3');
   efeitoSonoro = loadSound('sons/memecaixao.ogg');
   imgCoffin.hide();
+  imgFire.hide();
 }
 
 function setup() {
  // getAudioContext().suspend();
-  createCanvas(1280, 720);
+  createCanvas(windowWidth, windowHeight);
   
   cenario = new Cenario(imagemCenario,5);
   mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 100, 100);
@@ -65,10 +67,6 @@ function keyPressed(){
       any.pula();
       break;
   }
-}
-
-function touchStarted(){
-  mateus.pula();
 }
 
 function mousePressed() {
