@@ -24,9 +24,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   cenario = new Cenario(imagemCenario,5);
-  mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 100, 100);
-  any = new Any(imgAny, imgRodando ,360, 220, 75, 100);
-  chamas = new Chamas(imgChamas, imgRodando, 1280, 220, 80, 80);
+  mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 0.2*height, 0.2*height);
+  any = new Any(imgAny, imgRodando ,0.5*width, 220, 0.15*height, 0.2*height);
+  chamas = new Chamas(imgChamas, imgRodando, width, 220, 0.2*height, 0.2*height);
   trilhaSonora.loop();
   //frameRate(2);
 }
