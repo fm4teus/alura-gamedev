@@ -21,8 +21,11 @@ function preload() {
 
 function setup() {
  // getAudioContext().suspend();
-  createCanvas(windowWidth, windowHeight);
-  
+ if(windowHeight>windowWidth)
+  createCanvas(windowHeight, windowHeight);
+  else
+    createCanvas(windowWidth,windowHeight);
+
   cenario = new Cenario(imagemCenario,5);
   mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 0.2*height, 0.2*height);
   any = new Any(imgAny, imgRodando ,0.5*width, 220, 0.15*height, 0.2*height);
