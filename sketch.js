@@ -67,7 +67,10 @@ function keyPressed(){
   }
 }
 
+function touchStarted(){
+  mateus.pula();
+}
 
 function mousePressed() {
-  userStartAudio();
+  mateus.pula();
 }
