@@ -22,7 +22,7 @@ function preload() {
 function setup() {
  // getAudioContext().suspend();
  if(windowHeight>windowWidth)
-  createCanvas(windowHeight, windowHeight);
+  createCanvas(windowWidth, windowWidth);
   else
     createCanvas(windowWidth,windowHeight);
 
