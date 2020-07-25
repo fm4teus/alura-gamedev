@@ -2,7 +2,7 @@ class Chamas extends Personagem{
     anima(){
         if(this.fr%4==0){
             this.spriteX -= 448/6;
-            this.positionX-=20;
+            this.positionX-=25;
             if(this.positionX< 0)
              this.positionX = 1500;
         }

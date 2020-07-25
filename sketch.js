@@ -1,9 +1,9 @@
 let imagemCenario, imagemMateus, imgRodando, imgAny, imgChamas, imgCoffin;
-const gravidade = 10;
 let cenario;
 let any, mateus, chamas;
 let trilhaSonora, efeitoSonoro;
 let i=0, j=0;
+let gravidade = 10;
 
 function preload() {
   imagemCenario = loadImage('imagens/cenario/floresta.png');
@@ -25,7 +25,7 @@ function setup() {
   createCanvas(windowWidth, windowWidth);
   else
     createCanvas(windowWidth,windowHeight);
-
+  gravidade = height/80;
   cenario = new Cenario(imagemCenario,5);
   mateus = new Mateus(imagemMateus, imgRodando, 200, 220, 0.2*height, 0.2*height);
   any = new Any(imgAny, imgRodando ,0.5*width, 220, 0.15*height, 0.2*height);

@@ -8,7 +8,7 @@
   a button{
     display: block;
     margin: auto;
-    height: 30px;
+    min-height: 30px;
     width: 50%;
     border: 1px solid #555555;
     border-radius: 10px;
@@ -55,4 +55,22 @@ footer{
     background-color: black;
     color: #ffffff;
     height: 300px;
+}
+@media only screen and (orientation: portrait) {
+    
+    h1{
+        font-size: 4em;
+    }
+    p{
+        font-size: 2em;
+    }
+    
+    button{
+        font-size: 2em;
+    }
+    button#instructions{
+        width: 60%;
+        font-size: 2.5em;
+    }
+
 }

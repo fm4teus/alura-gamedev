@@ -34,7 +34,7 @@ exibe(){
 
 pula(){
     if(this.positionY <= this.sizeY)
-        this.jump += 100;
+        this.jump += height/8;
 }
 anda( frente ){
     if(frente){
